@@ -27,6 +27,43 @@
 <link href="assets/css/elpath.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<style>
+    .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  background-color: #20ba5a;
+}
+
+/* Responsive sizing for small screens */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+</style>
 
 </head>
 
@@ -336,7 +373,7 @@ project status -  Under construction  (  2029 onwards )</p>
                                         <p class="fs_16">Location - Devenahalli - Dodballapura road 
 Dimensions -  1200 sft - 2377 sqft
 Pricing - 72 L  to 1.22 cr onwards
-project status -  Under construction  (  2027 onwards )</p>
+project status -  Under construction  (2027 onwards)</p>
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +406,7 @@ project status -  Under construction  (  2025 onwards )</p>
                         <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="inner-box p_relative d_block">
                                 <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Concorde Equity.avif" alt="">
+                                    <img src="assets/images/project/Concorde Equity.jpg" alt="">
                                     <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">07</h2> -->
                                 </figure>
                                 <div class="lower-content p_relative d_block pt_35">
@@ -410,13 +447,17 @@ project status -  Under construction  (  2025 onwards )</p>
                         </div>
                     </div>
                 </div>
-                <div class="more-btn centred mt_75">
-                    <a href="project-2.html" class="theme-btn btn-one">View More<i class="icon-3"></i></a>
-                </div>
+               
             </div>
         </section>
         <!-- project-style-three end -->
-
+<!-- whatsapp -->
+ <a href="https://wa.me/917676478747?text=Hello%20Propify%20Homes"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat with us on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
         <!-- subscribe-section -->
         <section class="subscribe-section p_relative pl_60 pr_60">

@@ -27,6 +27,44 @@
 <link href="assets/css/elpath.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<style>
+    /* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  background-color: #20ba5a;
+}
+
+/* Responsive sizing for small screens */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+</style>
 
 </head>
 
@@ -269,7 +307,13 @@ About
         <!-- feature-section end -->
 
 
-
+<!-- whatsapp -->
+ <a href="https://wa.me/917676478747?text=Hello%20Propify%20Homes"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat with us on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 
         <!-- team-section -->

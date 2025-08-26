@@ -27,6 +27,45 @@
 <link href="assets/css/elpath.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<style>
+    /* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  background-color: #20ba5a;
+}
+
+/* Responsive sizing for small screens */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+</style>
 
 </head>
 
@@ -306,7 +345,7 @@ project status -  Under construction  (  2029 onwards )</p>
                                         <p class="fs_16">Location -  choodasandra - Office Sarjapur road
 Dimensions -  3406 sqft - 5542 sqft
 Pricing - 5.64 cr to 9.07 cr onwards
-project status -  Under construction  (  2027 onwards )</p>
+project status -  Under construction  (2027 onwards)</p>
                                     </div>
                                 </div>
                             
@@ -378,13 +417,17 @@ project status -  Under construction  (  2026 onwards )</p>
                         </div>
                     </div>
                 </div>
-                <div class="more-btn centred mt_75">
-                    <a href="project-2.html" class="theme-btn btn-one">View More<i class="icon-3"></i></a>
-                </div>
+               
             </div>
         </section>
         <!-- project-style-three end -->
-
+<!-- whatsapp -->
+ <a href="https://wa.me/917676478747?text=Hello%20Propify%20Homes"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat with us on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
         <!-- subscribe-section -->
         <section class="subscribe-section p_relative pl_60 pr_60">
