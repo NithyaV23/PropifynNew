@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <title></title>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Fav Icon -->
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -27,6 +32,15 @@
 <link href="assets/css/elpath.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 <style>
     /* Floating WhatsApp button */
 .whatsapp-float {
@@ -63,6 +77,116 @@
     bottom: 15px;
     right: 15px;
   }
+}
+/* Card Wrapper */
+.overlay-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.overlay-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Swiper Images */
+.overlay-card .swiper {
+  width: 100%;
+  height: 320px;
+}
+
+.overlay-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  color: #fff;
+}
+
+.overlay-content .project-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.overlay-content .project-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.overlay-content .project-details {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Below Text */
+.lower-content {
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.lower-content .project-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.lower-content .project-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.lower-content .project-details {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .overlay-card .swiper {
+    height: 260px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-card .swiper {
+    height: 200px;
+  }
+  .overlay-content {
+    padding: 12px;
+  }
+  .overlay-content .project-title {
+    font-size: 18px;
+  }
+  .overlay-content .project-details {
+    font-size: 13px;
+  }
+  .lower-content .project-title {
+    font-size: 18px;
+  }
+  .lower-content .project-details {
+    font-size: 13px;
+  }
+}
+.lower-content {
+  padding: 20px;       /* keeps text spacing */
+  margin-bottom: 25px; /* adds space below the card */
+}
+.project-card {
+  margin-bottom: 30px; /* space between cards */
 }
 
 </style>
@@ -210,195 +334,366 @@
         <section class="project-style-three p_relative d_block sec-pad">
             <div class="large-container">
                 <div class="row clearfix">
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Nandi meraki.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">01</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Nandi meraki 
-</a></h2>
-                                        
-                                        <p class="fs_16">Location - Begur Road
-Dimensions - 1bhk ( 725 sqft ) to 3bhk ( 1820 sqft )
-Pricing - 78.2 L to 2.04cr onwards
-project status -  Nearing possession ( Dec 2025 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Brigade Avalon.jpg" alt="">
-                                  
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Brigade Avalon </a></h2>
-                                     
-                                        <p class="fs_16">
-Location - Whitefield main Road
-Dimensions - 3 bhk ( 2765 sqft ) to 4 bhk ( 3862 sqft )
-Pricing - 4.62 cr to 6.67 cr onwards
-project status -  Under construction  ( Dec 2030 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Brigade Avalon.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">03</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Brigade Lakecrest</a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Brigade Lakecrest </h5> -->
-                                        <p class="fs_16">Location - KR Puram - Battarahalli
-Dimensions - 1 bhk ( 493 sqft ) to 4 bhk ( 2179 sqft )
-Pricing - 59 L to 2.50 cr onwards
-project status -  Under construction  ( Mar 2030 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Godrej Tiara.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Godrej Tiara </a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Godrej Tiara </h5> -->
-                                        <p class="fs_16">
-Location - Yeshwantpur - Tumkur road
-Dimensions - 3 bhk ( 2120 sqft ) to 4 bhk ( 2941 sqft )
-Pricing - 3.50 cr to 4.50 cr onwards
-project status -  Under construction  (  2030 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Lodha Haven.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Lodha Haven</a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Godrej Tiara </h5> -->
-                                        <p class="fs_16">
-Location - Silver County Road - HSR extension 
-Dimensions - 3 bhk ( 1950 sqft ) to 4 bhk ( 2925  sqft )
-Pricing - 3.50 cr to 4.85 cr onwards
-project status -  Under construction  (  2030 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Assetz Zen & Zato.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Assetz Zen & Zato </a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Godrej Tiara </h5> -->
-                                        <p class="fs_16">
-Location - Bagalur Main road - KIADB Aero space park
-Dimensions - 3 bhk ( 2150 sqft ) to 4 bhk ( 3010  sqft )
-Pricing - 2.90 cr to 3.80 cr onwards
-project status -  Under construction  (  2029 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Sattva Vasantha Skye.avif" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Sattva Vasantha Skye </a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Lodha Haven  </h5> -->
-                                        <p class="fs_16">Location - Devenahalli - KIAL Airport road Dimensions - 1 bhk ( 731 sqft ) to 4 bhk ( 2254 sqft ) Pricing - 83 L to 2.40 cr onwards project status - Under construction ( 2031 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Prestige Southern Star.jpg" alt="">
-                                
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Prestige Southern Star
+  <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - Bagalur Main road - KIADB Aero space park
-Dimensions - 3 bhk ( 2150 sqft ) to 4 bhk ( 3010  sqft )
-Pricing - 2.90 cr to 3.80 cr onwards
-project status -  Under construction  (  2029 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Brigade-Avalon.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Brigade Avalon 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Brigade-Avalon 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Brigade Avalon</a>
+          </h2>
+          <p class="project-details">
+            📍 Whitefield main Road <br>
+            📐 3 BHK (2765 sqft) – 4 BHK (3862 sqft) <br>
+            💰 4.62 Cr – 6.67 Cr onwards <br>
+            🏗️ Under construction (Dec 2030 onwards)
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+                 <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Brigade Lakecrest.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Brigade-Lakecrest 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/-Brigade-Lakecrest 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Brigade Lakecrest 
+</a>
+          </h2>
+          <p class="project-details">
+            📍Location - KR Puram - Battarahalli <br>
+            📐Dimensions - 1 bhk ( 493 sqft ) to 4 bhk ( 2179 sqft ) <br>
+            💰Pricing - 59 L to 2.50 cr onwards <br>
+            🏗️ project status -  Under construction  ( Mar 2030 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Godrej-Tiara.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Godrej-tiara 1.jpg" alt="Living Room"></div>
+            <!-- <div class="swiper-slide"><img src="assets/images/project/Godrej-Tiara 2.jpg" alt="Bedroom"></div> -->
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Godrej Tiara </a>
+          </h2>
+          <p class="project-details">
+            📍Location - Yeshwantpur - Tumkur road <br>
+            📐 Dimensions - 3 bhk ( 2120 sqft ) to 4 bhk ( 2941 sqft ) <br>
+            💰 Pricing - 3.50 cr to 4.50 cr onwards<br>
+            🏗️project status -  Under construction  (  2030 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Lodha-Haven.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/lodha_heaven 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Loadha-Haven 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Lodha Haven  </a>
+          </h2>
+          <p class="project-details">
+            📍 Location - Silver County Road - HSR extension <br>
+            📐 Dimensions - 3 bhk ( 1950 sqft ) to 4 bhk ( 2925  sqft )<br>
+            💰 Pricing - 3.50 cr to 4.85 cr onwards <br>
+            🏗️Pricing - 3.50 cr to 4.85 cr onwards
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                     <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+
+            
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Assetz-Zen-and-Sato.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/assetz-zen-sato 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Assetz-Zen and Sato 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Assetz Zen & Zato</a>
+          </h2>
+          <p class="project-details">
+            📍Location:Bagalur Main road - KIADB Aero space park <br>
+            📐 Dimensions - 3 bhk ( 2150 sqft ) to 4 bhk ( 3010  sqft )<br>
+            💰Pricing - 2.90 cr to 3.80 cr onwards <br>
+            🏗️ Pricing - 2.90 cr to 3.80 cr onwards
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                  <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Sattva-Vasanta-Skye.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Sattva-Vasanta-Skye 1.jpg" alt="Living Room"></div>
+            <!-- <div class="swiper-slide"><img src="assets/images/project/S" alt="Bedroom"></div> -->
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Sattva Vasantha Skye
+</a>
+          </h2>
+          <p class="project-details">
+            📍 Location - Devenahalli  - KIAL Airport road <br>
+            📐Dimensions - 1 bhk ( 731 sqft ) to 4 bhk ( 2254  sqft ) <br>
+            💰 Pricing - 83 L to 2.40 cr onwards<br>
+            🏗️project status -  Under construction  (  2031 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                 <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Prestige-Southern-Star.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Prestige park grove 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Prestige-Park-Grove 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Prestige Southern Star</a>
+          </h2>
+          <p class="project-details">
+            📍Location - Akshayanagar - BG road <br>
+            📐 Dimensions - 1 bhk ( 695 sqft ) to 4 bhk ( 2774  sqft ) <br>
+            💰Pricing - 84 L to 3.39 cr onwards <br>
+            🏗️project status -  Under construction  (  2029 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Sobha-Town-Park.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Sobha-Town-Park 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Sobha-Town-Park 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure
+
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Sobha Town park </a>
+          </h2>
+          <p class="project-details">
+            📍 Location - Hosur Road - Attibele<br>
+            📐 Dimensions - 1 bhk ( 753 sqft ) to 4 bhk ( 2800  sqft )<br>
+            💰 Pricing - 90 L to 4.10 cr onwards <br>
+            🏗️project status -  Under construction  (  2026 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
                    
                     
                  
-                      <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Sobha Town park (2).jpg" alt=""  >
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">07</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Sobha Town park 
+                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - Hosur Road - Attibele
-Dimensions - 1 bhk ( 753 sqft ) to 4 bhk (2800  sqft)
-Pricing - 90 L to 4.10 cr onwards
-project status -  Under construction  (2026 onwards)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Brigade-Avalon.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Brigade Avalon 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Brigade-Avalon 2.jpg" alt="Bedroom"></div>
+          </div>
+rui9o0P:_"2\`1
+e38
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Brigade Avalon</a>
+          </h2>
+          <p class="project-details">
+            📍 Whitefield main Road <br>
+            📐 3 BHK (2765 sqft) – 4 BHK (3862 sqft) <br>
+            💰 4.62 Cr – 6.67 Cr onwards <br>
+            🏗️ Under construction (Dec 2030 onwards)
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
                 </div>
             
             </div>
@@ -530,6 +825,23 @@ project status -  Under construction  (2026 onwards)</p>
             <span class="fal fa-long-arrow-up"></span>
         </button> -->
     </div>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
 
     <!-- jequery plugins -->

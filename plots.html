@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <title></title>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Fav Icon -->
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -27,8 +32,18 @@
 <link href="assets/css/elpath.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 <style>
-    .whatsapp-float {
+    /* Floating WhatsApp button */
+.whatsapp-float {
   position: fixed;
   width: 60px;
   height: 60px;
@@ -63,8 +78,118 @@
     right: 15px;
   }
 }
-</style>
+/* Card Wrapper */
+.overlay-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
 
+.overlay-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Swiper Images */
+.overlay-card .swiper {
+  width: 100%;
+  height: 320px;
+}
+
+.overlay-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  color: #fff;
+}
+
+.overlay-content .project-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.overlay-content .project-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.overlay-content .project-details {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Below Text */
+.lower-content {
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.lower-content .project-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.lower-content .project-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.lower-content .project-details {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .overlay-card .swiper {
+    height: 260px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-card .swiper {
+    height: 200px;
+  }
+  .overlay-content {
+    padding: 12px;
+  }
+  .overlay-content .project-title {
+    font-size: 18px;
+  }
+  .overlay-content .project-details {
+    font-size: 13px;
+  }
+  .lower-content .project-title {
+    font-size: 18px;
+  }
+  .lower-content .project-details {
+    font-size: 13px;
+  }
+}
+.lower-content {
+  padding: 20px;       /* keeps text spacing */
+  margin-bottom: 25px; /* adds space below the card */
+}
+.project-card {
+  margin-bottom: 30px; /* space between cards */
+}
+
+</style>
 </head>
 
 
@@ -95,7 +220,7 @@
                                 <i class="icon-bar"></i>
                                 <i class="icon-bar"></i>
                             </div>
-                                 <nav class="main-menu navbar-expand-md navbar-light">
+                                    <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li class="dropdown"><a href="index.html">Home</a>
@@ -175,9 +300,9 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-               <li><a href="https://x.com/PropifyHomes?t=xNe9HkIu-_l27zK-Co4ZcA&s=09"><span class="fab fa-twitter"></span></a></li>
+  <li><a href="https://x.com/PropifyHomes?t=xNe9HkIu-_l27zK-Co4ZcA&s=09"><span class="fab fa-twitter"></span></a></li>
                         <li><a href="https://www.facebook.com/share/178aSY8MXL/"><span class="fab fa-facebook-square"></span></a></li>
-                       <li><a href="https://www.linkedin.com/in/propify-homes-pvt-ltd-b4ba1337b"><span class="fab fa-linkedin-in"></span></a></li>
+                       <li><a href="https://www.linkedin.com/in/propify-homes-pvt-ltd-b4ba1337b"><span class="fab fa-linkedin-in"></span></a></li>>
                     </ul>
                 </div>
             </nav>
@@ -186,12 +311,12 @@
 
         <!-- Page Title -->
         <section class="page-title p_relative pt_250 pb_170 centred" style="background-image: url(assets/images/background/Villas\ banner.jpg);">
-            <!-- <div class="bg-layer p_absolute r_100 t_0" style="background-image: url(assets/images/background/plots\ banner.jpg);"></div> -->
+            <!-- <div class="bg-layer p_absolute r_100 t_0" style="background-image: url(assets/images/background/Apartment\ banner.jpg);"></div> -->
             <div class="large-container">
                 <div class="content-box p_relative d_block z_5">
                   <div class="title mb_25">
   <h1 style="color:#D9AA2F; font-size:68px; line-height:76px; font-weight:800; display:block;">
-  Plots
+Plots
   </h1>
 </div>
 
@@ -209,245 +334,404 @@
         <section class="project-style-three p_relative d_block sec-pad">
             <div class="large-container">
                 <div class="row clearfix">
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Sumadhura Panorama.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">01</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Sumadhura Panorama 
-</a></h2>
-                                        
-                                        <p class="fs_16">Location -  Devenhalli - Off Bellary Road
-Dimensions -  1200 sft - 4000 sqft
-Pricing - 90 L to 3.0 cr onwards
-project status -  Under construction  (  2027 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Total Environment Tangled Up In Green.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">02</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Total Environment Tangled Up In Green </a></h2>
-                                     
-                                        <p class="fs_16">
+  <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
 
-Location -  Devenahalli - Dodballapura road
-Dimensions -  1800 sft - 7200 sqft
-Pricing - 1.57 cr  to 6.20 cr onwards
-project status -  Under construction  (  2028 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Sattva Bhumi.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">03</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Sattva Bhumi </a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Brigade Lakecrest </h5> -->
-                                        <p class="fs_16">Location -  Devenahalli SH 96
-Dimensions -  600 sft - 1726 sqft
-Pricing - 39 L  to 1.03 cr onwards
-project status -  Under construction  (  2026 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block mb_50">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Assetz Promise of Spring.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Assetz Promise of Spring  </a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Godrej Tiara </h5> -->
-                                        <p class="fs_16">
-Location -  Devenahalli Bangalore to Hyderabad Road
-Dimensions -  1200 sft - 3300 sqft
-Pricing - 78 L  to 2.14 cr onwards
-project status -  Under construction  (  2026 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Prestige King County.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Prestige King County </a></h2>
-                                        <!-- <h5 class="d_block fs_18 lh_30 fw_sbold mb_10">Lodha Haven  </h5> -->
-                                        <p class="fs_16">Location - Jigani Rajpura off E city
-Dimensions -  1500 sft - 3000 sqft
-Pricing - 1.02 cr  to 2.55 cr onwards
-project status -  Under construction  (  2028 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Purva Kensho hills.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Purva Kensho hills 
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Sumadhura Panorama.jpg" alt="Front View"></div>
+            <!-- <div class="swiper-slide"><img src="assets/images/project/sumadhura panorama 1.jpg" alt="Living Room"></div> -->
+            <div class="swiper-slide"><img src="assets/images/project/sumadhura panorama 2.jpg" alt="Bedroom"></div>
+          </div>
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - S medahalli off Sarjapur road 
-Dimensions -  1000 sft - 3971 sqft
-Pricing - 84 L  to 1.87 cr onwards
-project status -  Under construction  (  2028 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Assetz Zen & Zato.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">04</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Assetz Zen & Zato
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - Bagalur Main road - KIADB Aero space park
-Dimensions - 3 bhk ( 2150 sqft ) to 4 bhk ( 3010  sqft )
-Pricing - 2.90 cr to 3.80 cr onwards
-project status -  Under construction  (  2029 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Arvind Orchards.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">05</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Arvind Orchards  
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Sumadhura Panorama </a>
+          </h2>
+          <p class="project-details">
+            📍 Location -  Devenhalli - Off Bellary Road <br>
+            📐 Dimensions -  1200 sft - 4000 sqft <br>
+            💰 Pricing - 90 L to 3.0 cr onwards <br>
+            🏗️project status -  Under construction  (  2027 onwards )
+          </p>
+        </div>
+      </div>
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - Devenahalli - Dodballapura road 
-Dimensions -  1200 sft - 2377 sqft
-Pricing - 72 L  to 1.22 cr onwards
-project status -  Under construction  (2027 onwards)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Manyata Earth Song.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">06</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Manyata Earth Song  
+    </div>
+  </div>
+</div>
 
-</a></h2>
-                                     
-                                        <p class="fs_16">
-Location - Devenahalli - IVC road
-Dimensions -  1500 sft - 2400 sqft
-Pricing - 1.17 cr  to 2.08 cr onwards
-project status -  Under construction  (  2025 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Concorde Equity.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">07</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Concorde Equity 
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - Mylappanahalli - Malur 
-Dimensions -  1200 sft - 2400 sqft
-Pricing - 21.6 L to 43.2 L onwards
-project status -  Under construction  (  2026 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                 <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Total-Environment-Tangled.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Total-Environment-Tangled 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Total-Environment-Tangled 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Total Environment Tangled Up In Green</a>
+          </h2>
+          <p class="project-details">
+            📍 Dimensions -  1800 sft - 7200 sqft<br>
+
+            📐  <br>
+            💰 Pricing - 1.57 cr  to 6.20 cr onwards <br>
+            🏗️ project status -  Under construction  (  2028 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Sattva Bhumi.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Sattva Bhumi 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Sattva Bhumi2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Sattva Bhumi </a>
+          </h2>
+          <p class="project-details">
+            📍Location -  Devenahalli SH 96 <br>
+            📐 Dimensions -  600 sft - 1726 sqft<br>
+            💰Pricing - 39 L  to 1.03 cr onwards <br>
+            🏗️ project status -  Under construction  (  2026 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Assetz-Promise-of-Spring.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/assetz Promise of Spring 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Assetz-Promise-of-Spring 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Assetz Promise of Spring </a>
+          </h2>
+          <p class="project-details">
+            📍 
+Location -  Devenahalli Bangalore to Hyderabad Road <br>
+            📐 Dimensions -  1200 sft - 3300 sqft<br>
+            💰Pricing - 78 L  to 2.14 cr onwards <br>
+            🏗️ project status -  Under construction  (  2026 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
                      <div class="col-lg-6 col-md-6 col-sm-12 project-block">
-                        <div class="project-block-three wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box p_relative d_block">
-                                <figure class="image-box p_relative d_block">
-                                    <img src="assets/images/project/Vaishnavi Life.jpg" alt="">
-                                    <!-- <h2 class="fs_100 lh_100 fw_light color_white p_absolute z_2 tran_5 r_20 b_20">07</h2> -->
-                                </figure>
-                                <div class="lower-content p_relative d_block pt_35">
-                                    <div class="text p_relative d_block pl_75">
-                                        <h2 class="d_block fs_30 lh_40 fw_sbold"><a href="project-details.html" class="d_iblock color_black hov_color">Vaishnavi Life   
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
 
-</a></h2>
-                                     
-                                        <p class="fs_16">Location - Chaparkallu road - Yelahanka Extension 
-Dimensions -  1200 sft - 2400 sqft
-Pricing - 75 L  to 1.50 cr onwards
-project status -  Under construction  (  2025 onwards )</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Prestige-Kings-County-Plots 1.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Prestige-Kings-County-Plots.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Prestige-Kings-County-Plots2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Prestige King County </a>
+          </h2>
+          <p class="project-details">
+            📍 Location - Jigani Rajpura off E city <br>
+            📐 Dimensions -  1500 sft - 3000 sqft<br>
+            💰 Pricing - 1.02 cr  to 2.55 cr onwards<br>
+            🏗️project status -  Under construction  (  2028 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                  <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Purva-Kensho-Hills.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Purva-Kensho--Hills 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/purva-kensho-hills 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Purva Kensho hills </a>
+          </h2>
+          <p class="project-details">
+            📍 Location - S medahalli off Sarjapur road  <br>
+            📐Dimensions -  1000 sft - 3971 sqft<br>
+            💰 Pricing - 84 L  to 1.87 cr onwards<br>
+            🏗️project status -  Under construction  (  2028 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                 <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Arvind-Orchards.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Arvind-Orchards 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Arvind Orchards 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Arvind Orchards </a>
+          </h2>
+          <p class="project-details">
+            📍
+Location - Devenahalli - Dodballapura road  <br>
+            📐 Dimensions -  1200 sft - 2377 sqft <br>
+            💰 Pricing - 72 L  to 1.22 cr onwards <br>
+            🏗️ project status -  Under construction  (  2027 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Manyata-Earthsong.jpg" alt="Front View"></div>
+            <!-- <div class="swiper-slide"><img src="assets/images/project/Manyata Earthsong 1.jpg" alt="Living Room"></div> -->
+            <div class="swiper-slide"><img src="assets/images/project/Manyata-Earthsong 2.jpg" alt="Bedroom"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure
+      {_)}>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Manyata Earth Song  </a>
+          </h2>
+          <p class="project-details">
+            📍Location - Devenahalli - IVC road<br>
+            📐 Dimensions -  1500 sft - 2400 sqft <br>
+            💰Pricing - 1.17 cr  to 2.08 cr onwards <br>
+            🏗️ project status -  Under construction  (  2025 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+                 
+                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Concorde_Equity.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Concorde_Equity 1.jpg" alt="Living Room"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Concorde_Equity 1.jpg" alt="Bedroom"></div>
+          </div>
+   <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html"> Concorde Equity </a>
+          </h2>
+          <p class="project-details">
+            📍 Location - Mylappanahalli - Malur  <br>
+            📐Dimensions -  1200 sft - 2400 sqft<br>
+            💰Pricing - 21.6 L to 43.2 L onwards <br>
+            🏗️project status -  Under construction  (  2026 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+                   
+                      
+                    <div class="col-lg-6 col-md-6 col-sm-12 project-block">
+  <div class="project-block-three wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+    <div class="inner-box project-card overlay-card">
+
+      <!-- Project Image Slider -->
+      <figure class="image-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/project/Vaishnavi-Life-PLots 1.jpg" alt="Front View"></div>
+            <div class="swiper-slide"><img src="assets/images/project/Vaishnavi-Life-PLots 3.jpg" alt="Living Room"></div>
+            <!-- <div class="swiper-slide"><img src="assets/images/project/Brigade Avalon.jpg" alt="Bedroom"></div> -->
+          </div>
+   <!-- Controls -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </figure>
+
+      <!-- Text Below Image -->
+      <div class="lower-content simple-text">
+        <div class="text">
+          <h2 class="project-title">
+            <a href="project-details.html">Vaishnavi Life    </a>
+          </h2>
+          <p class="project-details">
+            📍 Location - Chaparkallu road - Yelahanka Extension  <br>
+            📐Dimensions -  1200 sft - 2400 sqft<br>
+            💰Pricing - 75 L  to 1.50 cr onwards<br>
+            🏗️project status -  Under construction  (  2025 onwards )
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>               
+                 
+  
+</div>
+
                 </div>
-               
+            
             </div>
         </section>
         <!-- project-style-three end -->
@@ -487,8 +771,6 @@ project status -  Under construction  (  2025 onwards )</p>
         </section>
         <!-- subscribe-section end -->
 
-
-        <!-- main-footer -->
 <footer class="main-footer">
     <div class="large-container">
         <div class="footer-top">
@@ -570,8 +852,6 @@ project status -  Under construction  (  2025 onwards )</p>
 </footer>
 
 
-        <!-- main-footer end -->
-
 
 
 
@@ -581,6 +861,23 @@ project status -  Under construction  (  2025 onwards )</p>
             <span class="fal fa-long-arrow-up"></span>
         </button> -->
     </div>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
 
     <!-- jequery plugins -->
