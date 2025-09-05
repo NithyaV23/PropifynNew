@@ -734,7 +734,7 @@
                             <img src="assets/images/resource/testimonial-1.jpg" alt="">
                         </figure> -->
                         <h5 class="d_block fs_18 lh_25 color_white fw_bold mb_3"  style="color: aliceblue;">Amit Sharma</h5>
-                        <span class="designation p_relative d_block fs_14 lh_20 color_white"  style="color: aliceblue;">Home Seller</span>
+                        <span class="designation p_relative d_block fs_14 lh_20 color_white">Home Seller</span>
                     </div>
                 </div>
 
@@ -929,6 +929,29 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 
+<script>
+  $(document).ready(function(){
+    $(".six-item-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 2000,  // delay between slides (2 sec)
+      autoplaySpeed: 800,     // transition speed (0.8 sec)
+      smartSpeed: 1000,       // smoother animation
+      slideTransition: 'linear',
+      items: 6,
+      responsive:{
+        0:{ items:2 },
+        600:{ items:3 },
+        1000:{ items:6 }
+      }
+    });
+  });
+</script>
 </body><!-- End of .page_wrapper -->
 </html>
