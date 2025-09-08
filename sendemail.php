@@ -1,12 +1,12 @@
 <?php
-$to = "receiver@example.com"; // Replace with your email
-$subject = "Test Email from XAMPP Localhost";
-$message = "Hello! This is a test email sent from XAMPP using Gmail SMTP.";
-$headers = "From: yourgmail@gmail.com";
+$to = "madhumithakavi2006@gmail.com"; 
+$subject = "Test Mail";
+$message = "Hello! This is a test email from XAMPP.";
+$headers = "From: nithyanithya12624@gmail.com";
 
 if(mail($to, $subject, $message, $headers)) {
     echo "Email sent successfully!";
 } else {
-    echo "Failed to send email.";
+    echo "Email sending failed.";
 }
 ?>
