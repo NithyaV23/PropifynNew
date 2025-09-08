@@ -1,32 +1,38 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect form data
+    $name    = htmlspecialchars($_POST['username']);
+    $email   = htmlspecialchars($_POST['email']);
+    $phone   = htmlspecialchars($_POST['phone']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
 
-// Define some constants
-define( "RECIPIENT_NAME", "John Doe" );
-define( "RECIPIENT_EMAIL", "youremail@mail.com" );
+    // Your email address
+    $to = "Contact@propify-homes.com";
 
+    // Subject of email
+    $mail_subject = "New Contact Request from Website";
 
-// Read the form values
-$success = false;
-$userName = isset( $_POST['username'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['username'] ) : "";
-$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
-$userPhone = isset( $_POST['phone'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone'] ) : "";
-$userSubject = isset( $_POST['subject'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject'] ) : "";
-$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
+    // Email body content
+    $body = "
+    <h2>New Contact Request</h2>
+    <p><strong>Name:</strong> {$name}</p>
+    <p><strong>Email:</strong> {$email}</p>
+    <p><strong>Phone:</strong> {$phone}</p>
+    <p><strong>Location:</strong> {$subject}</p>
+    <p><strong>Message:</strong><br>{$message}</p>
+    ";
 
-// If all values exist, send the email
-if ( $userName && $senderEmail && $userPhone && $userSubject && $message) {
-  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
-  $headers = "From: " . $userName . "";
-  $msgBody = " Name: ". $userName . " Email: ". $senderEmail . " Phone: ". $userPhone . " Subject: ". $userSubject . " Message: " . $message . "";
-  $success = mail( $recipient, $headers, $msgBody );
+    // Email headers
+    $headers  = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: {$name} <{$email}>" . "\r\n";
 
-  //Set Location After Successsfull Submission
-  header('Location: contact.html?message=Successfull');
+    // Send email
+    if (mail($to, $mail_subject, $body, $headers)) {
+        echo "<script>alert('Your request has been sent successfully!'); window.location.href='thank-you.html';</script>";
+    } else {
+        echo "<script>alert('Sorry! Something went wrong. Please try again.'); window.history.back();</script>";
+    }
 }
-
-else{
-	//Set Location After Unsuccesssfull Submission
-  	header('Location: contact.html?message=Failed');	
-}
-
 ?>
